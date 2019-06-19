@@ -1,3 +1,4 @@
+/*This code simply gets the amount of bytes each data type will consume and prints it to console*/
 #include<stdio.h>
 int main(void)
 {
