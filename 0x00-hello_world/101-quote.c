@@ -11,5 +11,5 @@ for (int i = 0; i < 60; i++)
 {
 putchar(stderr, text[i]);
 }
-return (0);
+return (1);
 }
