@@ -7,6 +7,9 @@
 int main(void)
 {
 char text[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-fprintf(stderr, "%s", text[]);
+for (int i = 0; i < 60; i++)
+{
+putchar(stderr, text[i]);
+}
 return (0);
 }
