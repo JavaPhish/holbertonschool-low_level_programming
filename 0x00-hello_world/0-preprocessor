@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o c $CPATH
+gcc -oE c $CPATH
