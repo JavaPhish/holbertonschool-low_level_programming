@@ -1,7 +1,6 @@
 #include<stdio.h>
-
 /*
- *ugh
+ *Return 0 
 */
 int main(void)
 {
