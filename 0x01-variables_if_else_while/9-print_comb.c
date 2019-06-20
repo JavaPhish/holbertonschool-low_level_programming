@@ -18,6 +18,7 @@ int main(void)
 	while (num < 58)
 	{
 		i = 0;
+
 		while (i < 2)
 		{
 		putchar(cheese[i]);
