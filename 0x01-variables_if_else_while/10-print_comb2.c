@@ -22,6 +22,7 @@ int main(void)
 		putVar++;
 	}
 	putVar = 0;
+
 	for (loop1 = 1; loop1 < 10; loop1++)
 	{
 		for (loop2 = 0; loop2 < 10; loop2++)
@@ -39,6 +40,6 @@ int main(void)
 
 
 	putchar('\n');
-	
+
 	return (0);
 }
