@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#includ <stdio.h>
 /* more headers goes there */
 
 /**
