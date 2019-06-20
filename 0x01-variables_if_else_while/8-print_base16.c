@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	for (int i = 0; i <= 16; i++)
+	for (int i = 0; i < 10; i++)
 	{
-	if ( i > 10 )
-	{
-		
+		putchar(48 + i);
 	}
-	putchar(i);
+	for (char x = 'a'; x < 'g'; x++)
+	{
+		putchar(x);
 	}
 	putchar('\n');
 
