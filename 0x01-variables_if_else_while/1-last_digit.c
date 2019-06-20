@@ -19,7 +19,7 @@ int n;
 		printf("%s", " and is greater than 5\n");
 	}
 	else
-	if ((10 % n)n < 6 && (10 % n)n != 0)
+	if ((10 % n) < 6 && (10 % n) != 0)
 	{
 		printf("%s", " and is less than 6 and not 0\n");
 	}
