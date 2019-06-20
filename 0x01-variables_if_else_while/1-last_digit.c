@@ -1,7 +1,6 @@
-#include <stdlib.h>
-#include <time.h>
-#includ <stdio.h>
-/* more headers goes there */
+#include<stdlib.h>
+#include<time.h>
+#include<stdio.h>
 
 /**
  * main - Entry point
@@ -19,8 +18,7 @@ int n;
 	{
 		printf("%s", " and is greater than 5\n");
 	}
-	else
-	if ((10 % n) < 6 && (10 % n) != 0)
+	else if ((10 % n) < 6 && (10 % n) != 0)
 	{
 		printf("%s", " and is less than 6 and not 0\n");
 	}
