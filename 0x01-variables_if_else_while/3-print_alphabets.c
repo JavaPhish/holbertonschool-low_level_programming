@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-	int i = 97;
+	char i = 'a';
 
-	while (i <= 122)
+	while (i <= 'z')
 	{
 	putchar(i);
 	i++;
 	}
-	int x = 65;
+	char x = 'A';
 
-	while (x <= 90)
+	while (x <= 'Z')
 	{
 	putchar(x);
 	x++;
