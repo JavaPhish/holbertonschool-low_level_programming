@@ -12,11 +12,11 @@ int main(void)
 
 	cheese[0] = 44;
 	cheese[1] = 32;
-
 	putchar(num);
 	num++;
 	while (num < 58)
 	{
+		i = 0;
 		while (i < 2)
 		{
 		putchar(cheese[i]);
