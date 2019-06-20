@@ -7,11 +7,12 @@
 int main(void)
 {
 	int cheese[2];
-	int num = 48;
+	int num;
 	int i;
 
 	cheese[0] = 44;
 	cheese[1] = 32;
+	num = 48;
 	putchar(num);
 	num++;
 	while (num < 58)
