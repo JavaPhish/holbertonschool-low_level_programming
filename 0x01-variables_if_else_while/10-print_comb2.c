@@ -7,7 +7,6 @@
 int main(void)
 {
 	int cheese[2];
-	int num = 48;
 	int loop1;
 	int loop2;
 	int putVar = 0;
