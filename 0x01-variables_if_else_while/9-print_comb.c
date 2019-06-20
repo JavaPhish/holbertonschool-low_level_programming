@@ -8,8 +8,8 @@ int main(void)
 {
 	int cheese[2];
 
-	cheese[0] = 32;
-	cheese[1] = 44;
+	cheese[0] = 44;
+	cheese[1] = 32;
 	int num = 48;
 
 	putchar(num);
