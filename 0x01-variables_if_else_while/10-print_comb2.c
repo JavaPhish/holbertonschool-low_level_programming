@@ -15,7 +15,6 @@ int main(void)
 	cheese[0] = 44;
 	cheese[1] = 32;
 
-
 	while (putVar < 2)
 	{
 		putchar('0');
@@ -23,10 +22,12 @@ int main(void)
 	}
 	putVar = 0;
 
-	for (loop1 = 1; loop1 < 10; loop1++)
+	for (loop1 = 0; loop1 < 10; loop1++)
 	{
 		for (loop2 = 0; loop2 < 10; loop2++)
 		{
+			if (!(loop1 == 0 && loop2 == 0))
+			{
 			while (putVar < 2)
 			{
 				putchar(cheese[putVar]);
@@ -35,6 +36,7 @@ int main(void)
 			putchar(loop1 + 48);
 			putchar(loop2 + 48);
 			putVar = 0;
+			}
 		}
 	}
 
