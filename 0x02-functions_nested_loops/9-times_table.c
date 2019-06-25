@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * times_table - Prints the times table to console
+ *
+ * Return: Null
+ */
 void times_table(void)
 {
 	int loop1, loop2, temp;
