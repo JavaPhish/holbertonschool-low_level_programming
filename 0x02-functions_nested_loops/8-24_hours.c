@@ -1,7 +1,11 @@
 
 #include "holberton.h"
 
-
+/**
+ * jack_bauer - prints a full day to console
+ *
+ * Return: Null
+ */
 void jack_bauer(void)
 {
 int loop1, loop2, loop3, loop4;
