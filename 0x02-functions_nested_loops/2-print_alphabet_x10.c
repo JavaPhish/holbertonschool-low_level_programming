@@ -7,6 +7,6 @@ void print_alphabet_x10(void)
 
 	for (loop = 1; loop <= printAmount; loop++)
 	{
-		print_alphabet(void);
+		print_alphabet();
 	}
 }
