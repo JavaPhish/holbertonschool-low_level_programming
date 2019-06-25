@@ -5,8 +5,6 @@
  * @n: the number to be evaluated
  *
  * Return: 0 (is zero)
- * Return: 1 (Greater than zero)
- * Return: -1 (less than zero)
  */
 int print_sign(int n)
 {
