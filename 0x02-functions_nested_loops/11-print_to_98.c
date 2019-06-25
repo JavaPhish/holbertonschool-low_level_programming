@@ -1,6 +1,10 @@
 #include "holberton.h"
 
-
+/**
+ * print_to_98 - Prints all numbers to 98 regardless of start
+ * @n: the starting number
+ * Return: Null
+ */
 void print_to_98(int n)
 {
 	while (n <= 98)
