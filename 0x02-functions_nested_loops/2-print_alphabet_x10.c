@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_alphabet_x10 - prints alphabet 10 times using embedded for loops
+ *
+ * Return: Always 0 (Success)
+ */
 void print_alphabet_x10(void)
 {
 	int printAmount = 10;
