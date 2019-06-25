@@ -16,7 +16,6 @@ void times_table(void)
 		{
 			_putchar(',');
 			_putchar(' ');
-			_putchar(' ');
 			temp = loop1 * loop2;
 			if (temp > 99)
 			{
@@ -34,6 +33,6 @@ void times_table(void)
 			}
 				_putchar(temp + 48);
 		}
-		_putchar('\n');
+                _putchar('\n');
 	}
 }
