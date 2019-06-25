@@ -22,7 +22,11 @@ void print_to_98(int n)
 
 void printNum(int i)
 {
-
+	if (i > 99)
+	{
+		_putchar(i / 100);
+		i = i - ((i / 100) * 100);
+	}
 
 	if (i < 0)
 	{
