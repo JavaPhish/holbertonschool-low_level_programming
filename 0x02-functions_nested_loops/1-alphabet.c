@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * printAlphabet - prints the alphabet using only two putchars
+ * print_alphabet - prints the alphabet using only two putchars
  *
  * Return: Always 0 (Success)
  */
