@@ -7,8 +7,8 @@
  *
  * Return: the multiplied value
  */
-
 int mul(int a, int b)
 {
-	return (a * b);
+	a = a * b
+	return (a);
 }
