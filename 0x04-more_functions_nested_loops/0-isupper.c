@@ -4,8 +4,7 @@
  * _isupper - returns if a value is uppercase or not
  *
  * @c: the char to be evaluated
- * Return: 1 Is uppercase
- * Return: 0 Is lowercase
+ * Return: 1 Is uppercase or 0 is lowercase
  *
  */
 
