@@ -1,5 +1,4 @@
-#include "stdio.h"
-
+#include <stdio.h>
 
 /**
  * main - runs fizz_buzz
