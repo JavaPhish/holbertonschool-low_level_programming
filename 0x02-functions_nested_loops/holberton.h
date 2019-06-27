@@ -1,7 +1,8 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 int _putchar(char c);
+void printNum(int i);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 int _islower(int c);
@@ -13,6 +14,5 @@ void jack_bauer(void);
 void times_table(void);
 int add(int i, int x);
 void print_to_98(int i);
-void printNum(int i);
 
 #endif
