@@ -18,7 +18,10 @@ void print_triangle(int size)
 
 			for (loop3 = 0; loop3 <= size - loop1; loop3++)
 			{
+				if (!(loop3 == 0))
+				{
 				_putchar(' ');
+				}
 			}
 			for (loop2 = 0; loop2 + loop3 <= size  ; loop2++)
 			{
