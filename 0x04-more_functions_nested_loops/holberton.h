@@ -1,3 +1,4 @@
+void print_square(int size);
 void print_line(int i);
 int _isupper(int c);
 int _isdigit(int c);
