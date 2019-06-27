@@ -23,7 +23,14 @@ int main(void)
 		}
 			else if ((loop1 % 5) == 0)
 		{
-			printf("Buzz ");
+			if (loop1 == 100)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("Buzz ");
+			}
 		}
 		else
 		{
