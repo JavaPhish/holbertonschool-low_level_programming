@@ -8,10 +8,9 @@
  * Return: 1 is a digit
  *
  */
-
 int _isdigit(int c)
 {
-	if ((c > ('0' - 1)) && (c < ('9' - 1)))
+	if ((c > 47) && (c < 58))
 	{
 		return (1);
 	}
