@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include "holberton.h"
 
@@ -7,16 +8,6 @@
  * Return: 0 - success
  */
 int main(void)
-{
-	fizz_buzz();
-
-	return (0);
-}
-
-/**
- * fizz_buzz - prints 1 - 100 and fizz and buzz in place of 3 and 5 multiples
- */
-void fizz_buzz(void)
 {
 	int loop1;
 
@@ -30,7 +21,7 @@ void fizz_buzz(void)
 		{
 			printf("Fizz ");
 		}
-		else if ((loop1 % 5) == 0)
+			else if ((loop1 % 5) == 0)
 		{
 			printf("Buzz ");
 		}
@@ -42,4 +33,7 @@ void fizz_buzz(void)
 
 	putchar('\n');
 
+
+	return (0);
 }
+
