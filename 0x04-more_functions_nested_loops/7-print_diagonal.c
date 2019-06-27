@@ -15,7 +15,10 @@ void print_diagonal(int i)
 		{
 			for (loop2 = 0; loop2 <= loop1; loop2++)
 			{
+				if (!(loop2 == 0))
+				{
 				_putchar(' ');
+				}
 			}
 
 			_putchar('\\');
