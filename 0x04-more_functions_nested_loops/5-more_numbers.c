@@ -13,7 +13,13 @@ void more_numbers(void)
 	{
 		for (loop2 = 0; loop2 <= 14; loop2++)
 		{
-			_printNum(loop2);
+			if (loop2 > 9)
+			{
+				_putchar('1');
+			}
+
+			_putchar((loop2 % 10) + 48);
+
 		}
 	_putchar('\n');
 	}
