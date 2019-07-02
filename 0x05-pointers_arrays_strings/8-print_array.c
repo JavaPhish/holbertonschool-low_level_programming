@@ -20,14 +20,7 @@ void print_array(int *a, int n)
 		{
 			printf("%s", ", ");
 		}
-		else
-		{
-			printf("\n");
-		}
-	}
 
-	if (a[0] == '\0')
-	{
-		printf("\n");
 	}
+	printf("\n");
 }
