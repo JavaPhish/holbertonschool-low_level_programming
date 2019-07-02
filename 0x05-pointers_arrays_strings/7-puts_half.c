@@ -20,7 +20,7 @@ void puts_half(char *str)
 	}
 	while (str[temp] != '\0')
 	{
-		if (temp >= printNum)
+		if (temp > printNum)
 		{
 			_putchar(str[temp]);
 		}
