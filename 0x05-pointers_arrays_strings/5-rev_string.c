@@ -7,7 +7,8 @@ int _strlen(char *s);
  */
 void rev_string(char *s)
 {
-	char str[_strlen(s)];
+	const int arrayLen = _strlen(s);
+	char str[arrayLen];
 	int temp;
 
 	temp = 0;
