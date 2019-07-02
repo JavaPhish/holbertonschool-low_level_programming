@@ -22,7 +22,12 @@ void print_array(int *a, int n)
 		}
 		else
 		{
-			printf("%s", "\n");
+			printf("\n");
 		}
+	}
+
+	if (a[0] == '\0')
+	{
+		printf("\n");
 	}
 }
