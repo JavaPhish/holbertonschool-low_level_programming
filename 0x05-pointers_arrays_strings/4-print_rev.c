@@ -1,3 +1,4 @@
+
 #include "holberton.h"
 
 
@@ -12,7 +13,7 @@ void print_rev(char *s)
 	int temp;
 
 	temp = _strlen(s);
-	while (temp > -1)
+	while (temp != -1)
 	{
 		_putchar(s[temp]);
 		temp--;
