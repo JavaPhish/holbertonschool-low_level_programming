@@ -5,28 +5,23 @@ int _strlen(char *s);
  * rev_string - reverses a string in variable
  * @s: The string to be reversed
  */
+
 void rev_string(char *s)
 {
-	const int ARRAY_LENGTH = _strlen(s);
-	char str[ARRAY_LENGTH];
+	char i;
 	int temp;
 
 	temp = 0;
-	while (s[temp] != '\0')
+	while (temp < _strlen(s) / 2)
 	{
-		str[temp] = s[temp];
+		i = s[temp];
+		s[temp] = s[_strlen(s) - temp - 1];
+		s[_strlen(s) - temp - 1] = i;
 		temp++;
 	}
 
-	temp = _strlen(s);
-	while (temp != 0)
-	{
-		s[_strlen(s) - temp] = str[temp - 1];
-		temp--;
-	}
+	i++;
 }
-
-
 /**
  * _strlen - returns the length of a string
  * @s: the pointer to a string
