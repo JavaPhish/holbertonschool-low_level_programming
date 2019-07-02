@@ -7,12 +7,14 @@ int _strlen(char *s);
  */
 void puts_half(char *str)
 {
-	int temp, printNum;
+	int temp, printNum, isOdd;
 
+	isOdd = 0;
 	temp = 0;
 	if (_strlen(str) % 2 != 0)
 	{
 		printNum = (_strlen(str) - 1) / 2;
+		isOdd = 1;
 	}
 	else
 	{
@@ -20,9 +22,19 @@ void puts_half(char *str)
 	}
 	while (str[temp] != '\0')
 	{
-		if (temp >= printNum)
+		if (isOdd == 1)
 		{
-			_putchar(str[temp]);
+			if (temp > printNum)
+			{
+				_putchar(str[temp]);
+			}
+		}
+		else
+		{
+			if (temp >= printNum)
+			{
+				_putchar(str[temp]);
+			}
 		}
 	temp++;
 	}
