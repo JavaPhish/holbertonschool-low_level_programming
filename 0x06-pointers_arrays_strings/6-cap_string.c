@@ -33,7 +33,7 @@ char *cap_string(char *str)
 		}
 
 		loop1 = 0;
-		while (wordSeps[loop1] != '\n')
+		while (wordSeps[loop1] != '\0')
 		{
 			if (str[loop] == wordSeps[loop1])
 			{
