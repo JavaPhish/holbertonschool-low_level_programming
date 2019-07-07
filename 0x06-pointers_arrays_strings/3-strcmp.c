@@ -9,8 +9,10 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int loop = 0;
+	int loop;
 
+
+	loop = 0;
 	while (loop > -1)
 	{
 		if (s1[loop] == '\0' && s2[loop] == '\0')
