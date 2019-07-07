@@ -10,7 +10,7 @@
 char *cap_string(char *str)
 {
 	int loop, loop1, temp, isNextUpper;
-	char wordSeps[] = {' ', '	', '\n', ',', ';', '.',
+	char wordSeps[] = {' ', '\t', '\n', ',', ';', '.',
 			 '!', '?', '"', '(', ')', '{', '}'};
 
 	temp = 0;
