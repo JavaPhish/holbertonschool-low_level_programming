@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * reverse_array - Reverses an array
+ * @a: the array to be reversed
+ * @n: The array size
+ */
 void reverse_array(int *a, int n)
 {
 	int loop, buffer;
