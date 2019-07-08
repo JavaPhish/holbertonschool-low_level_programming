@@ -17,17 +17,17 @@ char *rot13(char *str)
 			|| (str[loop] < 91 && str[loop] > 64))
 		{
 			loop2 = 0;
-			while (loop2 != 12)
+			while (loop2 < 13)
 			{
-				str[loop]++;
-				if (str[loop] == 91 || str[loop] == 122)
+				str[loop]--;
+				if (str[loop] == 96 || str[loop] == 64)
 				{
-					str[loop] = str[loop] - 26;
+					str[loop] = str[loop] + 26;
 				}
 				loop2++;
 			}
 		}
-
+		loop++;
 	}
 
 
