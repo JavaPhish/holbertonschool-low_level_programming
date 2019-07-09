@@ -32,6 +32,5 @@ void print_diagsums(int *a, int size)
 		temp--;
 	}
 
-	printf("%d", added);
-	putchar('\n');
+	printf("%d\n", added);
 }
