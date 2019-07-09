@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#define NULL 0
 /**
  * _strchr - searches for a char within a string
  * @s: the string to be searched
@@ -22,5 +22,5 @@ char *_strchr(char *s, char c)
 		loop++;
 	}
 
-	return (0);
+	return (NULL);
 }
