@@ -66,7 +66,7 @@ char *_strchr(char *s, char c)
 {
 	return ('a');
 }
-unsigned int _strspn(char *s. char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	return (1);
 }
