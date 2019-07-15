@@ -4,8 +4,8 @@
 
 /**
  * main - calls things
- * argc: the number of commands
- * argv: each command
+ * @argc: the number of commands
+ * @argv: each command
  *
  * Return: 0;
  */
