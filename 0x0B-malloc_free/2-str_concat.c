@@ -17,24 +17,27 @@ char *str_concat(char *s1, char *s2)
 	 * The first two arrays get the size of the two params
 	 */
 	str1Size = 0;
-	while (s1[str1Size] != '\0')
+	if (s1 == NULL)
 	{
-		str1Size++;
+		s1 = malloc(sizeof(char));
+		s1[0] = '\0';
 	}
-
+	if (s2 == NULL)
+	{
+		s2 = malloc(sizeof(char));
+		s2[0] = '\0';
+	}
+	while (s1[str1Size] != '\0')
+		str1Size++;
 	str2Size = 0;
 	while (s2[str2Size] != '\0')
-	{
 		str2Size++;
-	}
 	str2Size++;
 	/*str2Size needs to be one extra to account for null byte*/
 	arr = malloc((str1Size + str2Size) * sizeof(char));
 	/* Makes sure theres enough memory*/
 	if (!arr)
-	{
 		return (NULL);
-	}
 	for (loop = 0; loop < (str1Size + str2Size - 1); loop++)
 	{
 		if (loop > str1Size - 1)
@@ -45,8 +48,6 @@ char *str_concat(char *s1, char *s2)
 		{
 			arr[loop] = s1[loop];
 		}
-
 	}
-
 	return (arr);
 }
