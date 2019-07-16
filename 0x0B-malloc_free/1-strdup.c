@@ -19,7 +19,7 @@ char *_strdup(char *str)
 
 
 
-	strSize = 0;
+	strSize = 1;
 	for (loop = 0; str[loop] != '\0'; loop++)
 	{
 		strSize++;
