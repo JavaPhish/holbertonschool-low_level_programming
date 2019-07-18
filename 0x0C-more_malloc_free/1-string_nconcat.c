@@ -47,5 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (loop1 = 0; loop1 < max && loop1 < (int)sizeof(s2); loop1++)
 		concat_string[loop + loop1] = s2[loop1];
 
+	concat_string[loop + loop1] = '\0';
+
 	return (concat_string);
 }
