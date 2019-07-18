@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
@@ -12,8 +13,10 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	int loop;
 	int mem = nmemb;
-	void *alloc;
+	char *alloc;
+
 
 	if ((int)nmemb == 0 || (int)size == 0)
 		return (NULL);
@@ -23,6 +26,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (!alloc)
 		return (NULL);
 
+	for (loop = 0; loop < (int)size * (int)nmemb; loop++)
+		alloc[loop] = 0;
 
 	return (alloc);
 
