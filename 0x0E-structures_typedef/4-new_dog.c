@@ -12,14 +12,8 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *new_name, *new_owner;
-	int new_age;
 
-	new_name = name;
-	new_owner = owner;
-	new_age = age;
-
-	dog_t temp = {.name = new_name, .age = new_age, .owner = new_owner};
+	dog_t temp = {.name = name, .age = age, .owner = owner};
 	dog_t *ret_temp = &temp;
 
 	if (!ret_temp)
