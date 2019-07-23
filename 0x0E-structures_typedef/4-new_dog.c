@@ -27,6 +27,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ret_temp->age = age;
 	ret_temp->owner = new_owner;
 
+	free(new_name);
+	free(new_owner);
+
 	return (ret_temp);
 }
 
@@ -66,6 +69,7 @@ char *_strdup(char *str)
 	{
 		arr[loop] = str[loop];
 	}
+
 
 	return (arr);
 
