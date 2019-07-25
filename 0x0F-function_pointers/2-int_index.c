@@ -18,13 +18,14 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (!cmp)
 		return (-1);
+
 	if (!array)
 		return (-1);
 
 
 	for (temp = 0; temp < (int) size; temp++)
 	{
-			if (cmp(array[temp]) == 1)
+		if (cmp(array[temp]) == 1)
 			return (temp);
 	}
 
