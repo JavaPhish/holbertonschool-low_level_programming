@@ -22,6 +22,7 @@ void print_all(const char * const format, ...)
 			|| format[loop] == 's'
 			|| format[loop] == 'i'))
 			printf(", ");
+
 		switch (format[loop])
 		{
 			case 'c':
@@ -38,11 +39,10 @@ void print_all(const char * const format, ...)
 				if (word == NULL)
 				{
 					printf("(nil)");
+					break;
 				}
-				else
-				{
 					printf("%s", word);
-				}
+
 				break;
 		}
 	loop++;
