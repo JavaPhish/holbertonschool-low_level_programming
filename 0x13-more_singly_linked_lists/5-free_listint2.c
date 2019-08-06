@@ -11,11 +11,13 @@ void free_listint(listint_t *head);
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *start_node;
+	listint_t *start_node, *head_temp;
 
-	start_node = head->next;
+	head_temp = *head;
+
+	start_node = head_temp->next;
 	free_listint(start_node);
-	*head = NULL;
+	head = NULL;
 }
 
 
