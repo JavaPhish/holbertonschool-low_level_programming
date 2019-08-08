@@ -14,7 +14,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int final;
 	int flippy_doo[] = {0, 1, 2, 4, 8, 16, 32, 64, 128};
 
-	final, bit_tracker = 0;
+	bit_tracker = 0;
+	final = 0;
 
 	if (!b)
 		return (0);
