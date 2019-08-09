@@ -7,7 +7,9 @@
  */
 void print_binary(unsigned long int n)
 {
-	int loop;
+	int loop, original_number;
+
+	original_number = n;
 
 	if (n < 1)
 		_putchar('0');
@@ -15,23 +17,23 @@ void print_binary(unsigned long int n)
 	{
 
 		loop = 1;
-		while (loop <= (int)n)
+		while (loop <= original_number)
 			loop = loop * 2;
 
 		loop = loop / 2;
 		_putchar('1');
-		n = n - loop;
+		original_number = original_number - loop;
 
 		while (loop > 1)
 		{
 			loop = loop / 2;
-			if (loop > (int)n)
+			if (loop > original_number)
 			{
 				_putchar('0');
 			}
 			else
 			{
-				n = n - loop;
+				original_number = original_number - loop;
 				_putchar('1');
 			}
 		}
