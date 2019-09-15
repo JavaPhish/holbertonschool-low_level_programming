@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at-index - inserts a node at a given index
+ * insert_dnodeint_at_index - inserts a node at a given index
  * @h: The list
  * @idx: the index
  * @n: the node to add
