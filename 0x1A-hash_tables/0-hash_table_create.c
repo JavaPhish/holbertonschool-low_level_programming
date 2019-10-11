@@ -19,11 +19,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (size < 1)
 		return (NULL);
 
-	start_node = malloc(sizeof(hash_node_t *));
+	start_node = malloc(sizeof(hash_node_t));
 
 	if (!start_node)
 	{
-		free(new_table);
 		free(start_node);
 		return (NULL);
 	}
