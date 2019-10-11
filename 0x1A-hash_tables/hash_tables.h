@@ -30,6 +30,8 @@ typedef struct hash_table_s
      hash_node_t **array;
 } hash_table_t;
 
+hash_node_t *create_node(hash_node_t *prev_node);
+
 hash_table_t *hash_table_create(unsigned long int size);
 
 #endif

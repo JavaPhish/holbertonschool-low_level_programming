@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 
-hash_node_t *create_node(hash_node_t *prev_node);
-
 /**
  * hash_table_create - Creates a new hash table at the specified size
  * @size: The size of the hash table to create
