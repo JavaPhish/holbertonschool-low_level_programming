@@ -31,9 +31,22 @@ hash_table_t *hash_table_create(unsigned long int size)
 	new_table->size = size;
 	new_table->array = &start_node;
 
+	if (!new_table)
+	{
+		free(start_node);
+		free(new_table);
+		return (NULL);
+	}
+
 	for (; node_iter < (int)size - 1; node_iter++)
 	{
 		start_node = create_node(start_node);
+		if (start_node == NULL)
+		{
+			free(start_node);
+			free(new_table);
+			return (NULL);
+		}
 	}
 
 	return (new_table);
