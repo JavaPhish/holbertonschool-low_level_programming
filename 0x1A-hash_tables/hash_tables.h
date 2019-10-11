@@ -31,7 +31,7 @@ typedef struct hash_table_s
 } hash_table_t;
 
 hash_node_t *create_node(hash_node_t *prev_node);
-
+unsigned long int hash_djb2(const unsigned char *str);
 hash_table_t *hash_table_create(unsigned long int size);
 
 #endif
