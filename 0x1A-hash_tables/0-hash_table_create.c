@@ -12,7 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table;
 	hash_node_t *start_node;
-	int node_iter = 1;
+	int node_iter;
 
 	if (size < 1)
 		return (NULL);
@@ -36,7 +36,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	for (; node_iter < (int)size - 1; node_iter++)
+	for (node_iter = 0; node_iter < (int)size; node_iter++)
 	{
 		start_node = create_node(start_node);
 		if (start_node == NULL)
