@@ -1,6 +1,8 @@
 #include "sort.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+int is_sorted(int *array, size_t size);
 
 /**
  * bubble_sort - Sorts a linked list using bubble sort
@@ -11,15 +13,56 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int *head = *array;
+	int swap, head, tail;
 
-	/* Makes sure the given list was at the start of the list */
-	while (array->prev != NULL)
-		array = array->prev;
+	head = 1;
+	tail = 0;
 
-	head = array;
+	if (array && size > 1)
+	{
+		while (is_sorted(array, size) == 0)
+		{
+			if (array[tail] > array[head])
+			{
+				swap = array[tail];
+				array[tail] = array[head];
+				array[head] = swap;
 
-	
+				print_array(array, size);
+			}
 
+			if (array[head + 1] != '\0')
+			{
+				head++;
+				tail++;
+			}
+			else
+			{
+				head = 1;
+				tail = 0;
+			}
+		}
+	}
+}
 
+/**
+ * is_sorted - Returns if an array is sorted or not
+ * @array: The array to check
+ * @size: The size of the array
+ *
+ * Return: 1 if sorted, otherwise 0
+ */
+int is_sorted(int *array, size_t size)
+{
+	int loop = 0;
+
+	while (loop != (int)size)
+	{
+		if (array[loop - 1] > array[loop])
+			return (0);
+
+		loop++;
+	}
+
+	return (1);
 }
