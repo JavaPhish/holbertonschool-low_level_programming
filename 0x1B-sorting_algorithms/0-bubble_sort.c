@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int is_sorted(int *array, size_t size);
-
 /**
  * bubble_sort - Sorts a linked list using bubble sort
  * @array: The list to sort
