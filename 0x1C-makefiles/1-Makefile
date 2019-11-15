@@ -1,6 +1,6 @@
 # Same as 0 but with variables
 
 CC = gcc
-SRC = *.c
+SRC = main.c holberton.c
 all: $(SRC)
-	gcc -o holberton $(SRC)
+	gcc $(SRC) -o holberton
