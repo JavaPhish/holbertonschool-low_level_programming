@@ -1,0 +1,6 @@
+# Same as 0 but with variables
+
+CC = gcc
+SRC = *.c
+all: $(SRC)
+	gcc -o holberton $(SRC)
