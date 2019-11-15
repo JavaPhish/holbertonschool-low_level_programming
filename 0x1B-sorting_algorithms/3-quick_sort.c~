@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include "sort.h"
+#include <stdlib.h>
+
+void sort(int *array, size_t low, size_t high);
+int partition(int *array, size_t low, size_t high);
+
+/**
+ * quick_sort - Sorts an array using the quick sort algorithm
+ * @array: The array to sort
+ * @size: The size of the array to sory
+ */
+void quick_sort(int *array, size_t size)
+{
+
+	sort(array, (size_t)0, size - 1);
+
+
+}
+
+void sort(int *array, size_t low, size_t high)
+{
+	int p;
+
+	if (low < high)
+	{
+		p = partition(array, low, high);
+		sort(array, low, p - 1);
+		sort(array, p + 1, high);
+		print_array(array, high);
+	}
+}
+
+int partition(int *array, size_t low, size_t high)
+{
+	int pivot = array[high];
+	int i = (int)low - 1;
+	int loop, swap;
+
+	for (loop = low; loop <= (int)high - 1; loop++)
+	{
+		if (array[loop] <= pivot)
+		{
+			swap = array[loop];
+			array[loop] = array[i];
+			array[i] = swap;
+			i++;
+		}
+	}
+	swap = array[i + 1];
+	array[i + 1] = array[high];
+	array[high] = swap;
+
+	return (i + 1);
+}

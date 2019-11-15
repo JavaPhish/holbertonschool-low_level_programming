@@ -1,0 +1,30 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "sort.h"
+
+/**
+ * bubble_sort - Sorts a linked list using bubble sort
+ * @array: The list to sort
+ * @size: The size of the list
+ *
+ * Return: The sorted list
+ */
+void bubble_sort(int *array, size_t size)
+{
+	int loop, left_node, right_node;
+
+	for (loop = 0; 
+
+
+}
+
+int is_sorted(int *array, size_t size)
+{
+	int loop;
+
+	while(loop != size)
+	{
+
+}
+
+}

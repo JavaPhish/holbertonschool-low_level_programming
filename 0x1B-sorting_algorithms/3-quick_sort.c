@@ -18,14 +18,29 @@ void quick_sort(int *array, size_t size)
 
 void sort(int *array, int low, int high)
 {
-	int p;
+	int part = NULL;
 
 	if (low < high)
 	{
-		p = partition(array, low, high);
-		sort(array, low, p - 1);
-		sort(array, p + 1, high);
+		part = partition(array, low, high);
+
+		sort(array, low, part - 1);
+		sort(array, part + 1, high);
 	}
+}
+
+int did_swap(int *array, int *prev)
+{
+	int iter = 0;
+
+	for (iter = 0; array[iter] != '\0'; iter++)
+	{
+		if (array[iter] != prev[iter])
+			return (0);
+	}
+
+	return (1);
+
 }
 
 int partition(int *array, int low, int high)
@@ -33,23 +48,31 @@ int partition(int *array, int low, int high)
 	int pivot = array[high];
 	int i = low;
 	int loop, swap;
+	int did_change = 0;
 
 	for (loop = low; loop < high; loop++)
 	{
 		if (array[loop] < pivot)
 		{
+			did_change = 1;
+
 			swap = array[loop];
 			array[loop] = array[i];
 			array[i] = swap;
 			i += 1;
 		}
+
+	}
+
+	if  (did_change == 1)
+	{
+		print_array(array, arr_len(array));
+		did_change = 0;
 	}
 
 	swap = array[i];
 	array[i] = array[high];
 	array[high] = swap;
-
-	print_array(array, arr_len(array));
 
 	return (i);
 }
