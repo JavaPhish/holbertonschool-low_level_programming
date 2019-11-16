@@ -1,0 +1,13 @@
+# make file 
+
+CC=gcc
+SRC := holberton.c main.c
+OBJ := $(SRC:%.c=%.o)
+NAME=holberton
+BINS=$(SRCS:%.c=%)
+
+%.o : %.c
+	$(CC) -c -o $@ $<
+
+all: $(OBJ)
+	$(CC) -o $(NAME) $^
