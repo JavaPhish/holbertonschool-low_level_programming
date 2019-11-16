@@ -1,9 +1,9 @@
 # make file 
 
 CC=gcc
-SRC := holberton.c main.c
+SRC := main.c holberton.c
 OBJ := $(SRC:.c=.o)
 NAME=holberton
 
 all: m.h $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC)	 $(OBJ) -o $(NAME)
