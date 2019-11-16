@@ -10,15 +10,15 @@ all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -f *~ holberton
+	$(RM) -f *~ $(NAME)
 
 oclean:
-	$(RM) -f main.o holberton.o
+	$(RM) -f $(OBJ)
 
 fclean:
-	$(RM) -f *~ holberton
-	$(RM) -f main.o holberton
+	$(RM) -f *~ $(NAME)
+	$(RM) -f $(OBJ)
 
 re:
-	$(RM) -f main.o holberton.o
+	$(RM) -f $(OBJ)
 	make all
