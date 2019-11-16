@@ -5,8 +5,5 @@ SRC := holberton.c main.c
 OBJ := $(SRC:%.c=%.o)
 NAME=holberton
 
-%.o : %.c
-	$(CC) -c -o $@ $<
-
-all: $(OBJ)
-	$(CC) -o $(NAME) $^
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
