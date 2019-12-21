@@ -1,3 +1,5 @@
+  GNU nano 2.2.6                     File: 7-insert_dnodeint.c
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,12 +19,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
         int count = 1;
         dlistint_t *temp;
 
-
-
-        if (*h == NULL)
+        if (idx == 0)
         {
-                free(new_node);
-                return (NULL);
+                new_node->n = n;
+                new_node->next = *h;
+                new_node->prev = NULL;
+
+                if (*h != NULL)
+                        (*h)->prev = new_node;
+
+                (*h) = new_node;
+                return (new_node);
         }
 
         /* Navigate to head */
@@ -35,18 +42,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
                 count++;
                 *h = (*h)->next;
         }
-
         /* Store the nodes surrounding the new node for linking*/
         temp = *h;
         *h = (*h)->next;
-
         /* Define and assign our new node */
         new_node->n = n;
         new_node->prev = temp;
         new_node->next = (*h);
-
         temp->next = new_node;
         (*h)->prev = new_node;
-
         return (new_node);
 }
