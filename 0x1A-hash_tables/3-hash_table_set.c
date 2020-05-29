@@ -16,37 +16,31 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int index;
 	hash_node_t *new_node;
 
-	if (strlen(key) == 0)
+	if (strlen(key) < 1)
 		return (0);
 
 	index = (int)key_index((unsigned char *)key, ht->size);
 
+	new_node = malloc(sizeof(hash_node_t));
+	if (!new_node)
+	{
+		free(new_node);
+		return (0);
+	}
+
+	new_node->key = strdup((char *)key);
+	new_node->value = strdup((char *)value);
+
+	new_node->next = NULL;
 	if (ht->array[index] == NULL)
 	{
-		new_node = malloc(sizeof(hash_node_t));
-		if (!new_node)
-			return (0);
-		new_node->key = (char *)key;
-		new_node->value = (char *)value;
-		new_node->next = NULL;
 		ht->array[index] = new_node;
+		return (1);
 	}
-	else if (strcmp(ht->array[index]->key, (char *)key) == 0)
-	{
-		ht->array[index]->value = (char *)value;
-	}
-	else
-	{
-		new_node = malloc(sizeof(hash_node_t));
-		if (!new_node)
-			return (0);
-		new_node->key = (char *)key;
-		new_node->value = (char *)value;
-		ht->array[index] = new_node;
 
-		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
-	}
+	/* if its this far, theres already a node there. */
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 
 	return (1);
 }
